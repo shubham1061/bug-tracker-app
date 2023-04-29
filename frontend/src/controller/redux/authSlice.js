@@ -12,9 +12,10 @@ const slice= createSlice({
             const{name,password}= action.payload;
            state.loggedIn= true;
            state.admin=true;
+        //    console.log(state);
 
         },
-        signOut:(state,action)=>{
+        SignOut:(state,action)=>{
             state.loggedIn=false;
             state.admin =false;
         },
@@ -27,4 +28,4 @@ const slice= createSlice({
 })
 
 export default slice.reducer;
-export const{signIn,signOut,createUser} =slice.actions;
+export const{signIn,SignOut,createUser} =slice.actions;
